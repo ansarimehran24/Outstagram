@@ -14,6 +14,7 @@ import Notifications from './Components/Notifications/Notifications';
 import CreatePost from './Components/CreatePost/CreatePost';
 import EditProfile from './Components/EditProfile/EditProfile';
 import ReelsPage from './Components/ReelsPage/ReelsPage';
+import StoryPage from './Components/StoryPage/StoryPage';
 
 import './App.css';
 
@@ -68,6 +69,7 @@ function App() {
         <Route path="/create" element={<ProtectedRoute isLoggedIn={isLoggedIn}><CreatePost /></ProtectedRoute>} />
         <Route path="/profile/:username" element={<ProtectedRoute isLoggedIn={isLoggedIn}><ProfilePage /></ProtectedRoute>} />
         <Route path="/edit-profile" element={<ProtectedRoute isLoggedIn={isLoggedIn}><EditProfile onUpdateUser={setCurrentUser} /></ProtectedRoute>} />
+        <Route path="/story/:id" element={<ProtectedRoute isLoggedIn={isLoggedIn}><StoryPage /></ProtectedRoute>} />
 
         {/* Redirect */}
         <Route path="*" element={<Navigate to={isLoggedIn ? '/' : '/login'} replace />} />
