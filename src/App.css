@@ -1,0 +1,35 @@
+.home-page {
+  padding-top: 60px;
+  min-height: 100vh;
+}
+
+.home-page__content {
+  max-width: 975px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.home-page__main {
+  flex: 1;
+  max-width: 614px;
+  min-width: 0;
+}
+
+@media (max-width: 935px) {
+  .home-page__content {
+    justify-content: center;
+  }
+
+  .home-page__content > aside {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page__content {
+    padding: 16px 8px;
+  }
+}
