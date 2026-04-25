@@ -37,6 +37,7 @@ const Navbar = ({ currentUser }) => {
       <div className="navbar__container">
         {/* Logo */}
         <Link to="/" className="navbar__logo">
+          <img src="/favicon.svg" alt="Outstagram Logo" style={{ width: '28px', height: '28px' }} />
           <span className="navbar__logo-text">Outstagram</span>
         </Link>
 
